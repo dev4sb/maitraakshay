@@ -6,7 +6,7 @@
 
 <?php
 
-$apikey = "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"; 
+$apikey = "API_KEY_HERE"; 
 
 $inputType = ($_POST['inputType'] === 'images') ? 'images' : 'text';
 $prompt = htmlspecialchars($_POST['prompt']);
