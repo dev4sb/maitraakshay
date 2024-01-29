@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show And Hide</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="input-group" style="margin-bottom: 10px;">
+        <label for="txtPassword">Password</label>
+        <input type="password" id="txtPassword" class="form-control" name="txtPassword" />
+        <button type="button" id="btnToggle" class="toggle">Show/Hide
+            <i id="eyeIcon" class="fa fa-eye"></i>
+        </button>
+    </div>
+
+
+    <script>
+
+        let clickButton = document.getElementById("btnToggle");
+        // console.log(clickButton);
+        let password = document.getElementById("txtPassword");
+        // console.log(password);
+
+        // let passwordInput = document.getElementById("txtPassword"),
+        //     toggle = document.getElementById("btnToggle");
+
+        // function togglePassword() {
+        //     if (passwordInput.type === "password") {
+        //         passwordInput.type = "text";
+        //     } else {
+        //         passwordInput.type = "password";
+        //     }
+        // }
+
+        // toggle.addEventListener("click", togglePassword);
+
+
+        clickButton.addEventListener("click",()=>{
+            if(password.type === "password"){
+                password.type = "text";
+            }
+            else{
+                password.type = "password";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

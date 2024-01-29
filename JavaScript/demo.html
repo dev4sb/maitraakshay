@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="" id="loginform">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" id="firstname" class="firstname"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+</body>
+<script>
+    let loginForm = document.getElementById("loginform");
+    // console.log(loginForm);
+
+    loginForm.addEventListener("submit",() => {
+        // e.preventDefault();
+
+        let username = document.getElementById("firstname").value;
+        // console.log(username);
+
+        let password = document.getElementById("password").value;
+
+        if (username == "" || password == "") {
+            alert("Please Add Details");
+        }
+        else {
+            alert("This Form Submitted");
+            console.log(
+                `This Form Username is ${username} And Password is ${password}`    
+            )
+            // $("form")[0].reset();
+        }
+    });
+
+</script>
+
+</html>
