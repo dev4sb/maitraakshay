@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Images/red_product_sale_tag.jpg" type="image/x-icon">
+    <title>Bootstrap 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&amp;display=swap"
+        rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            font-family: "Jost", sans-serif;
+            font-optical-sizing: auto;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        /* .menunavbar {
+            min-width: 90vw;
+            background-color: #2b3238;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+        }
+
+        .navbar-brand {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            width: 600px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .menu-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            font-weight: 500;
+        }
+
+        
+
+        .coworking_headline {
+            font-size: 28px;
+        }
+
+        @media (max-width:320px) {
+            .coworking_headline {
+                font-size: 20px;
+            }
+
+            .fa-facebook-f {
+                height: 22px;
+                width: 22px;
+            }
+        }
+
+        .nav-link,
+        .dropdown-menu,
+        .dropdown-item {
+            background-color: #2b3238;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        */
+
+        /* .amp-iconfont {
+            color: #ffffff;
+        }
+
+        .mbr-semibold {
+            font-weight: 500;
+        } */
+
+
+        .section-text-align-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 23px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            color: white;
+            font-family: 'Jost', sans-serif;
+        }
+
+        @media (max-width: 320px) {
+            .section-text-align-center {
+                height: 100vh;
+                width: 100vw;
+            }
+        }
+
+        .creative_space_title {
+            text-align: center;
+            font-weight: 600;
+            font-size: 64px;
+
+        }
+
+        @media (max-width: 320px) {
+            .creative_space_title {
+                font-weight: 600;
+                font-size: 46px;
+            }
+
+            .carouselpara {
+                font-size: 18px;
+            }
+        }
+
+        .carouselpara {
+            text-align: center;
+        }
+
+        .menu-social-list {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel_section {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .technology_title {
+            text-align: center;
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+
+        .btn_get_started {
+            text-align: center;
+        }
+
+        .second_section {
+            width: 100vw;
+            height: 233px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .imgslider {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .btn {
+            display: block;
+            margin: 0 auto;
+            height: 60px;
+            width: 160px;
+            padding: 19px;
+            font-size: 16px;
+            background-color: #20a997;
+            color: #ffffff;
+            border-color: #20a997;
+            font-weight: 400;
+            white-space: normal;
+            line-height: 1;
+            letter-spacing: 0.02rem;
+            transition: all 0.2s ease-out;
+        }
+
+        .btn-lg {
+            /* padding: 1.2375rem 1.5625rem; */
+            border-radius: 5px;
+        }
+
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #20a997;
+        }
+
+        /* --------Second Section CSS----------- */
+
+
+        .second_main_div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            /* padding: 30px; */
+        }
+
+        @media (max-width:320px) {
+            .second_main_div {
+                flex-direction: column;
+            }
+        }
+
+        .second_section_para {
+            font-size: 20px;
+            line-height: 28px;
+            padding: 5px;
+        }
+
+        .third_main_div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width:320px) {
+            .third_main_div {
+                /* width: 320px; */
+                flex-direction: column;
+            }
+        }
+
+        .third_main_div_icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icefont {
+            color: #a1ce55;
+        }
+
+        .third_section_para {
+            text-align: center;
+        }
+
+        /* -------Forth Section CSS---------- */
+        .fourth_main_div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: 20px; */
+            gap: 20px;
+        }
+
+        .fourth_section_heading_three {
+            font-size: 49px;
+            font-weight: 500;
+        }
+
+        @media (max-width:320px) {
+            .fourth_main_div {
+                flex-direction: column;
+            }
+
+            .fourth_section_heading_three {
+                font-size: 28px;
+                font-weight: 500;
+
+            }
+        }
+
+
+        /* -------Fifth Section CSS---------- */
+
+
+        .cid-srwSBXwMD5 .mbr-text,
+        .cid-srwSBXwMD5 .mbr-section-btn {
+            color: #383838;
+            font-size: 23px;
+        }
+
+        .cid-srwSBXwMD5 H4 {
+            color: #20a997;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: .3em;
+        }
+
+
+
+        .cid-srwRa9Px7Z {
+            position: relative;
+            text-align: center;
+        }
+
+        .fifth_heading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            text-align: center;
+        }
+
+        #eight_div_img {
+            opacity: 1;
+            display: block;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #eight_div_img_two {
+            opacity: 1;
+            display: block;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #eight_div_img_three {
+            opacity: 1;
+            display: block;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #eight_div_img_four {
+            opacity: 1;
+            display: block;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #eight_div_img_five {
+            opacity: 1;
+            display: block;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .middle_two {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .middle_three {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .middle_four {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .middle_five {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .fifth_section_first_div:hover #eight_div_img {
+            opacity: 0.8;
+        }
+
+        .fifth_section_first_div:hover .middle {
+            opacity: 1;
+        }
+
+        .fifth_section_third_div:hover #eight_div_img_two {
+            opacity: 0.8;
+        }
+
+        .fifth_section_third_div :hover .middle_two {
+            opacity: 1;
+        }
+
+        .fifth_section_fourth_div:hover #eight_div_img_three {
+            opacity: 0.8;
+        }
+
+        .fifth_section_fourth_div:hover .middle_three {
+            opacity: 1;
+        }
+
+        .fifth_section_sixth_div:hover #eight_div_img_four {
+            opacity: 0.8;
+        }
+
+        .fifth_section_sixth_div:hover .middle_four {
+            opacity: 1;
+        }
+
+        .fifth_section_eight_div:hover #eight_div_img_five {
+            opacity: 0.8;
+        }
+
+        .fifth_section_eight_div:hover .middle_five {
+            opacity: 1;
+        }
+
+        .info_card {
+            width: 100%;
+            background-color: #20a997;
+            color: #ffffff;
+        }
+
+        .card_wrap {
+            position: relative;
+            height: 340px;
+            margin-bottom: 35px;
+            cursor: pointer;
+        }
+
+
+        .mbr-column {
+            flex-direction: column;
+        }
+
+        .mbr-jc-c {
+            justify-content: center;
+        }
+
+        .mbr-flex {
+            display: flex;
+        }
+
+        .fifth_section_second_heading,
+        .fifth_section_fifth_heading,
+        .fifth_section_seven_heading {
+            font-size: 33px;
+            padding: 15px;
+        }
+
+
+        /* -------------Sixth Section CSS------------ */
+
+        .sixth_section_headers_one {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #20a997;
+            letter-spacing: 5px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .sixth_section_headers_two {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .slider_box {
+            margin-top: 40px;
+            width: 100%;
+            height: 340px;
+        }
+
+
+        /* ---------Seven Section CSS--------- */
+
+
+        .seven_section {
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .align_center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .iconfont-wr {
+            display: flex;
+            justify-content: center;
+        }
+
+        .seven_section_para_one {
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+            font-weight: 500;
+        }
+
+        @media (max-width:320px) {
+            .seven_section_para_one {
+                font-size: 20px;
+            }
+        }
+
+        .seven_section_para_two {
+            font-size: 20px;
+            font-weight: 500;
+
+
+        }
+
+        .seven_section_para_three {
+            color: #a1ce55;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+
+        /* ---------Eight Section CSS-------- */
+        .eight_section_main_div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        @media (max-width:320px) {
+            .eight_section_main_div {
+                flex-direction: column;
+            }
+        }
+
+        .eight_section_content_div {
+            padding: 19px;
+        }
+
+        .eight_section_first_heading {
+            /* color: #a1ce55; */
+            font-size: 33px;
+        }
+
+        button {
+            background-color: #20a997;
+            border-color: #20a997;
+            padding: 8px;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+
+        /* -----------Nine Section CSS----------- */
+        .nine_section_para_one {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #20a997;
+            letter-spacing: 5px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .nine_section_para_two {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 55px;
+            font-weight: 500;
+
+        }
+
+        .nine_div_imges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+
+        }
+
+        /* ---------Tenth Section CSS---------- */
+
+        .tenth_main_div {
+            background-color: #2b3238;
+            color: #ffffff;
+            padding: 100px;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        @media (max-width:320px) {
+            .tenth_main_div {
+                /* flex-direction: column; */
+                padding: 0;
+                gap: 20px;
+                font-weight: 400;
+                font-size: 15px;
+            }
+
+            .tenth_section_h3 {
+                margin-top: 100px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        input {
+            padding: 8px;
+            width: 255px;
+            background-color: #2b3238;
+            border-color: #ffffff;
+        }
+
+
+
+        /* -------------- */
+        .NavBarMainDiv {
+            background-color: #2b3238;
+            position: sticky;
+            top: 0;
+            z-index: 3;
+            /* border: 2px solid green; */
+        }
+
+        .navbar {
+            /* border: 2px solid red; */
+            /* height: 66px; */
+
+        }
+
+        .navDiv {
+            /* border: 2px solid yellow; */
+        }
+
+        .NavCentered {
+            /* border: 2px solid orange; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .nav-link{
+            font-weight: 500;
+        }
+        .navbar-nav{
+            display: flex;
+            gap: 60px;
+        }
+        .Removemargin{
+            margin-left: 30px;
+        }
+        .menu-social-list{
+            margin-right: 100px;
+        }
+        @media (max-width:320px){
+            .navbar-nav{
+                gap: 1px;
+            }
+            .Removemargin{
+                margin: 0;
+            }
+            .menu-social-list{
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="NavBarMainDiv">
+        
+        <nav class="navbar navbar-expand-lg">
+            <div class="container navDiv">
+                <a class="navbar-brand" href="#" style="color: #ffffff; font-weight: 500; font-size: 24px;">Co-working</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="NavCentered">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link Removemargin" href="#" style="color: #ffffff;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: #ffffff;">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: #ffffff;">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: #ffffff;">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                style="color: #ffffff;">
+                                View
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Review</a></li>
+                                <li><a class="dropdown-item" href="#">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">Examples</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <div class="menu-social-list">
+                        <a href="#" target="_blank">
+                            <span class="amp-iconfont fa-facebook-f fa"><svg class="fa-facebook-f" width="22"
+                                    height="22" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor">
+                                    <path
+                                        d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </a><a href="#" target="_blank">
+                            <span class="amp-iconfont fa-instagram fa"><svg class="fa-facebook-f" width="22" height="22"
+                                    viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                    <path
+                                        d="M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm138 0q0 164-115 279t-279 115-279-115-115-279 115-279 279-115 279 115 115 279zm108-410q0 38-27 65t-65 27-65-27-27-65 27-65 65-27 65 27 27 65zm-502-220q-7 0-76.5-.5t-105.5 0-96.5 3-103 10-71.5 18.5q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103-3 96.5 0 105.5.5 76.5-.5 76.5 0 105.5 3 96.5 10 103 18.5 71.5q20 50 58 88t88 58q29 11 71.5 18.5t103 10 96.5 3 105.5 0 76.5-.5 76.5.5 105.5 0 96.5-3 103-10 71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103 3-96.5 0-105.5-.5-76.5.5-76.5 0-105.5-3-96.5-10-103-18.5-71.5q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10-96.5-3-105.5 0-76.5.5zm768 630q0 229-5 317-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124t-124-322q-5-88-5-317t5-317q10-208 124-322t322-124q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </a><a href="#" target="_blank">
+                            <span class="amp-iconfont fa-twitter fa"><svg class="fa-facebook-f" width="22" height="22"
+                                    viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                    <path
+                                        d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </div>
+    </div>
+
+
+    <!-- <div class="container-fluid menunavbar">
+        <section class="menu horizontal-menu cid-srugmNvvB2" id="menu1-0">
+            <nav class="navbar navbar-dropdown navbar-expand-lg navbar-fixed-top" style="height: 75px;">
+                <div class="container-fluid navbardiv" style="width: 80%;">
+                    <div class="menu-container">
+                        <a class="navbar-brand nav-link coworking_headline" href="#">Co-Working</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Benefits</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        View
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Review</a></li>
+                                        <li><a class="dropdown-item" href="#">Contact</a></li>
+                                        <li><a class="dropdown-item" href="#">Examples</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-social-list">
+                            <a href="#" target="_blank">
+                                <span class="amp-iconfont fa-facebook-f fa"><svg class="fa-facebook-f" width="28"
+                                        height="28" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor">
+                                        <path
+                                            d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
+                                        </path>
+                                    </svg></span>
+                            </a><a href="#" target="_blank">
+                                <span class="amp-iconfont fa-instagram fa"><svg class="fa-facebook-f" width="28"
+                                        height="28" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor">
+                                        <path
+                                            d="M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm138 0q0 164-115 279t-279 115-279-115-115-279 115-279 279-115 279 115 115 279zm108-410q0 38-27 65t-65 27-65-27-27-65 27-65 65-27 65 27 27 65zm-502-220q-7 0-76.5-.5t-105.5 0-96.5 3-103 10-71.5 18.5q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103-3 96.5 0 105.5.5 76.5-.5 76.5 0 105.5 3 96.5 10 103 18.5 71.5q20 50 58 88t88 58q29 11 71.5 18.5t103 10 96.5 3 105.5 0 76.5-.5 76.5.5 105.5 0 96.5-3 103-10 71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103 3-96.5 0-105.5-.5-76.5.5-76.5 0-105.5-3-96.5-10-103-18.5-71.5q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10-96.5-3-105.5 0-76.5.5zm768 630q0 229-5 317-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124t-124-322q-5-88-5-317t5-317q10-208 124-322t322-124q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317z">
+                                        </path>
+                                    </svg></span>
+                            </a><a href="#" target="_blank">
+                                <span class="amp-iconfont fa-twitter fa"><svg class="fa-facebook-f" width="28"
+                                        height="28" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor">
+                                        <path
+                                            d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z">
+                                        </path>
+                                    </svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </div> -->
+
+    <!-- Carousel Sliders -->
+    <div class="container-fluid carousel_section ">
+        <div class="">
+            <div class="">
+                <div id="carouselExampleIndicators" class="carousel" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button_dots" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"
+                            style="width: 10px; height: 10px; border-radius: 50%"></button>
+                        <button type="button_dots" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2" style="width: 10px; height: 10px; border-radius: 50%"></button>
+                        <button type="button_dots" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3" style="width: 10px; height: 10px; border-radius: 50%"></button>
+                    </div>
+                    <div class="">
+                        <div class="">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../Website/Images/background_Image.jpg" class="imgslider" alt="..."
+                                        width="100%" height="">
+                                    <div class="section-text-align-center">
+                                        <h4 class=" technology_title">FACILITIES</h4>
+                                        <h4 class=" creative_space_title">Work Space</h4>
+                                        <p class="carouselpara">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus at
+                                            Necessitatibus at Lorem ipsum dolor sit amet.
+
+                                        </p><br>
+                                        <button class="btn btn-lg btn_get_started">Get Started &nbsp;
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" width="11" height="11">
+                                                <path d="M4.6 22.6L15.2 12 4.6 1.4 6 0l12 12L6 24z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../Website/Images/background_image2.jpg" class="imgslider" alt="..."
+                                        width="100%" height="">
+                                    <div class="section-text-align-center">
+                                        <h4 class="technology_title">TECHNOLOGY</h4>
+                                        <h4 class="creative_space_title">Create Space</h4>
+                                        <p class="carouselpara">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus
+                                            <br> at Lorem ipsum dolor sit amet.
+                                        </p><br>
+                                        <button class="btn btn-lg btn_get_started">Get Started &nbsp;
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" width="11" height="11">
+                                                <path d="M4.6 22.6L15.2 12 4.6 1.4 6 0l12 12L6 24z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item ">
+                                    <img src="../Website/Images/background_image3.jpg" class="imgslider" alt="..."
+                                        width="100%" height="">
+                                    <div class="section-text-align-center">
+                                        <h4 class="technology_title">PROFESSIONAL</h4>
+                                        <h4 class="creative_space_title">Prof Work</h4>
+                                        <p class="carouselpara">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus at
+                                            Necessitatibus <br> at Lorem ipsum dolor sit amet.
+
+                                        </p><br>
+                                        <button class="btn btn-lg btn_get_started">Get Started &nbsp;
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" width="11" height="11">
+                                                <path d="M4.6 22.6L15.2 12 4.6 1.4 6 0l12 12L6 24z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br><br><br>
+    <!-- Second Section -->
+    <div class="container mt-3 second_section">
+        <div class="second_main_div">
+            <div class="col-sm-6 col-md-6 col-lg-6 second_section_headings">
+                <h5 style="color: #20a997; letter-spacing:4px; font-size: 1rem;">BENEFITS</h5>
+                <h3>Your Comfort is Our Priority</h3>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 second_section_para">
+                <p class="second_section_para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque totam
+                    assumenda vero
+                    tempora accusamus, fuga suscipit tempore accusantium, perspiciatis excepturi explicabo,
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Third Section -->
+
+    <div class="container mt-5 iconsaligndiv">
+        <div class="">
+            <div class="third_main_div">
+                <div class="col-sm-3 col-md-3 col-lg-3 third_main_div_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icefont" viewBox="0 0 24 24" fill="currentColor"
+                        width="48" height="48">
+                        <path d="M0 4v16h24V4H0zm19.8 2L12 10.7 4.2 6h15.6zM2 18V7l10 6 10-6v11H2z"></path>
+                    </svg><br>
+                    <h3 class="icon_headings">Mail</h3>
+                    <p class="third_section_para">
+                        Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.
+                    </p><br>
+                </div>
+
+                <div class="col-sm-3 col-md-3 col-lg-3 third_main_div_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icefont" viewBox="0 0 24 24" fill="currentColor"
+                        width="48" height="48">
+                        <path d="M24 18V2H0v16h9v2H7v2h10v-2h-2v-2h9zm-11 2h-2v-2h2v2zM2 16V4h20v12H2z"></path>
+                    </svg><br>
+                    <h3 class="icon_headings">Visual</h3>
+                    <p class="third_section_para"> Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.
+                    </p><br>
+                </div>
+
+                <div class="col-sm-3 col-md-3 col-lg-3 third_main_div_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icefont" viewBox="0 0 24 24" fill="currentColor"
+                        width="48" height="48">
+                        <path d="M11.4 6l-3-3H0v19h24V6H11.4zM22 20H2V5h5.6l3 3H22v12z"></path>
+                    </svg><br>
+                    <h3 class="icon_headings">File</h3>
+                    <p class="third_section_para"> Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.
+                    </p><br>
+                </div>
+
+                <div class="col-sm-3 col-md-3 col-lg-3 third_main_div_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icefont" viewBox="0 0 24 24" fill="currentColor"
+                        width="48" height="48">
+                        <path
+                            d="M19 3V2h-2v1H7V2H5v1H0v19h24V3h-5zm3 17H2V5h3v1h2V5h10v1h2V5h3v15zM5 12h2v2H5v-2zm4 0h2v2H9v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM5 8h2v2H5V8zm4 0h2v2H9V8zm4 0h2v2h-2V8zm4 0h2v2h-2V8zM5 16h2v2H5v-2zm4 0h2v2H9v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z">
+                        </path>
+                    </svg><br>
+                    <h3 class="icon_headings">Calender</h3>
+                    <p class="third_section_para"> Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.
+                    </p><br>
+                </div>
+            </div>
+            <br>
+
+            <div class="">
+                <div class="third_main_div">
+
+                    <div class="col-sm-3 col-md-3 col-lg-3 third_main_div_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icefont" viewBox="0 0 24 24" fill="currentColor"
+                            width="48" height="48">
+                            <path d="M17 6V2H7v4H0v16h24V6h-7zM9 4h6v2H9V4zm13 16H2v-7h20v7zm0-9H2V8h20v3z"></path>
+                        </svg><br>
+                        <h3 class="icon_headings">Suitcase </h3>
+                        <p class="third_section_para"> Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.
+                        </p><br>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 third_main_div_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icefont" viewBox="0 0 24 24" fill="currentColor"
+                            width="48" height="48">
+                            <path d="M0 23.4V2h24v15H6.4L0 23.4zM2 4v14.6L5.6 15H22V4H2z"></path>
+                        </svg><br>
+                        <h3 class="icon_headings">Chat</h3>
+                        <p class="third_section_para"> Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.
+                        </p><br>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 third_main_div_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icefont" viewBox="0 0 24 24" fill="currentColor"
+                            width="48" height="48">
+                            <path
+                                d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM4.9 5H9c.6 0 1 .4 1 1s-.4 1-1 1H5.5C4.1 7 3 8.1 3 9.5S4.1 12 5.5 12H6c.6 0 1 .4 1 1s-.4 1-1 1H2.2c-.1-.6-.2-1.3-.2-2 0-2.7 1.1-5.2 2.9-7zM2.8 16H6c1.7 0 3-1.3 3-3s-1.3-3-3-3h-.5c-.3 0-.5-.2-.5-.5s.2-.5.5-.5H9c1.7 0 3-1.3 3-3s-1.3-3-3-3H7.7C9 2.4 10.4 2 12 2c4.1 0 7.6 2.5 9.2 6H17c-1.7 0-3 1.3-3 3s1.3 3 3 3h.5c.3 0 .5.2.5.5s-.2.5-.5.5H13c-1.7 0-3 1.3-3 3s1.3 3 3 3h3.3c-1.3.6-2.8 1-4.3 1-4.1 0-7.6-2.5-9.2-6zm16.3 3H13c-.6 0-1-.4-1-1s.4-1 1-1h4.5c1.4 0 2.5-1.1 2.5-2.5S18.9 12 17.5 12H17c-.6 0-1-.4-1-1s.4-1 1-1h4.8c.1.6.2 1.3.2 2 0 2.7-1.1 5.2-2.9 7z">
+                            </path>
+                        </svg><br>
+                        <h3 class="icon_headings">Global</h3>
+                        <p class="third_section_para"> Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.
+                        </p><br>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 third_main_div_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icefont" viewBox="0 0 24 24" fill="currentColor"
+                            width="48" height="48">
+                            <path
+                                d="M24 18V2H0v16h9v2H7v2h10v-2h-2v-2h9zm-11 2h-2v-2h2v2zM2 16V4h20v12H2zm10-9h8v2h-8V7zm0 4h4v2h-4v-2zm-8 2h6V7H4v6zm2-4h2v2H6V9z">
+                            </path>
+                        </svg><br>
+                        <h3 class="icon_headings">Sites</h3>
+                        <p class="third_section_para"> Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit.
+                        </p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- 4th Section -->
+
+
+    <div class="">
+        <div class="container cid-srwSBXwMD5">
+            <div class="fourth_main_div">
+                <div class="col-sm-6 col-md-6 col-lg-6 fourth_second_div">
+                    <h4 class="mbr-section-subtitle mbr-fonts-style mbr-semibold display-4">WHO WE ARE
+                    </h4>
+                    <h3
+                        class="mbr-section-title mbr-fonts-style mbr-black mbr-semibold display-2 fourth_section_heading_three">
+                        We’re
+                        Creative <br> Coworking Working <br> Space For Sucsess</h3> <br>
+                    <p class="mbr-text mbr-pt-2 mbr-fonts-style">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quisquam
+                        optio eos harum ad corporis qui porro quia incidunt! Laudantium, quasi esse?
+                        Quisquam, fuga expedita iure labore, asperiores ratione dolorem!
+                    </p>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 fourth_first_div">
+                    <img src="../Website/Images/section_forth_image.jpeg" class="fourth_section_img" alt="" width="100%"
+                        height="80%">
+                </div><br>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+
+    <!-- 5th Section -->
+
+    <div class="container cid-srwRa9Px7Z">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4 fifth_section_first_div">
+                <div class="card_wrap info_card mbr-flex mbr-column mbr-jc-c">
+                    <img src="../Website/Images/section_fifth_one.jpg" alt="" id="eight_div_img">
+                    <div class="middle">
+                        <h5
+                            class="mbr-sectio-title info_title mbr-white mbr-fonts-style mbr-semibold display-5 fifth_heading">
+
+                            How to success through market segmentation
+
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 fifth_section_second_div">
+                <div class="card_wrap info_card mbr-flex mbr-column mbr-jc-c">
+                    <h5
+                        class="mbr-sectio-title info_title mbr-white mbr-fonts-style mbr-semibold fifth_section_second_heading">
+
+                        3 clear warnings that say your goals are too small
+
+                    </h5>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 fifth_section_third_div">
+                <!-- <img src="../Website/Images/fifth_section_three.jpg" alt="" width="100%" height="100%"> -->
+                <div class="card_wrap info_card mbr-flex mbr-column mbr-jc-c">
+                    <img src="../Website/Images/section_fifth_two.jpg" alt="" id="eight_div_img_two">
+                    <div class="middle_two">
+                        <h5
+                            class="mbr-sectio-title info_title mbr-white mbr-fonts-style mbr-semibold display-5 fifth_heading">
+
+                            10 things successful people do differently Career
+
+                        </h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-8 col-md-8 col-lg-8 fifth_section_fourth_div">
+                <!-- <img src="../Website/Images/section_fifth_two.jpg"  alt="" width="100%" height="100%"> -->
+                <div class="card_wrap info_card mbr-flex mbr-column mbr-jc-c">
+                    <img src="../Website/Images/fifth_section_three.jpg" alt="" id="eight_div_img_three">
+                    <div class="middle_three">
+                        <h5
+                            class="mbr-sectio-title info_title mbr-white mbr-fonts-style mbr-semibold display-5 fifth_heading">
+
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quia minus doloremque
+                            repellendus
+
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 fifth_section_fifth_div">
+                <!-- <img src="../Website/Images/section_fifth_one.jpg" alt="" width="100%" height="100%"> -->
+                <div class="card_wrap info_card mbr-flex mbr-column mbr-jc-c">
+                    <h5
+                        class="mbr-sectio-title info_title mbr-white mbr-fonts-style mbr-semibold fifth_section_fifth_heading">
+
+                        <p style="font-size: 20px; letter-spacing: 5px;">WORKSPACE</p>
+                        3 clear warnings that say your goals are too small
+
+                    </h5>
+                    <a class="btn btn-md btn-primary display-4 readmorebutton" href="#"
+                        style="border-color: #20a997;">Read More &nbsp;<span
+                            class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn mbr-bold">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="11"
+                                height="11">
+                                <path d="M4.6 22.6L15.2 12 4.6 1.4 6 0l12 12L6 24z"></path>
+                            </svg>
+                        </span></a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-4 col-md-4 col-lg-4 fifth_section_sixth_div">
+                <div class="card_wrap info_card mbr-flex mbr-column mbr-jc-c">
+                    <img src="../Website/Images/section_forth_image.jpeg" alt="" id="eight_div_img_four">
+                    <div class="middle_four">
+                        <h5
+                            class="mbr-sectio-title info_title mbr-white mbr-fonts-style mbr-semibold display-5 fifth_heading">
+
+                            Comfort
+                            Lorem ipsum dolor sit amet At ducimus aliquam necessitatibus?
+
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="card_wrap info_card mbr-flex mbr-column mbr-jc-c fifth_section_seven_div">
+                    <h5
+                        class="mbr-sectio-title info_title mbr-white mbr-fonts-style mbr-semibold fifth_section_seven_heading">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="56"
+                            height="56">
+                            <path
+                                d="M20 10h-1V7H1v11c0 3.3 2.7 6 6 6h6c3 0 5.4-2.2 5.9-5H20c2.2 0 4-1.8 4-4v-1c0-2.2-1.8-4-4-4zm-3 8c0 2.2-1.8 4-4 4H7c-2.2 0-4-1.8-4-4V9h14v9zm5-3c0 1.1-.9 2-2 2h-1v-5h1c1.1 0 2 .9 2 2v1zM9 5H7V0h2v5zm4 0h-2V3h2v2z">
+                            </path>
+                        </svg><br>
+
+                        How to success through market segmenatation
+
+
+                    </h5>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 fifth_section_eight_div">
+                <div class="card_wrap info_card mbr-flex mbr-column mbr-jc-c">
+                    <img src="../Website/Images/fifth_section_four.jpg" alt="" id="eight_div_img_five">
+                    <div class="middle_five">
+                        <h5
+                            class="mbr-sectio-title info_title mbr-white mbr-fonts-style mbr-semibold display-5 fifth_heading">
+
+                            10 things successful people do differently career
+
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <!-- Sixth Section -->
+
+    <div class="container">
+        <div class="sixth_section_headers_one">
+            <p>EXAMPLES</p>
+        </div>
+        <div class="sixth_section_headers_two">
+            <p>We create a space for creativity</p>
+        </div>
+    </div>
+
+    <br> <br>
+
+    <div class="container-fluid">
+        <div id="multiItemCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="../Website/Images/background_Image.jpg" class="d-block w-100" alt="Item 1">
+                        </div>
+                        <div class="col-4">
+                            <img src="../Website/Images/background_image2.jpg" class="d-block w-100" alt="Item 2">
+                        </div>
+                        <div class="col-4">
+                            <img src="../Website/Images/background_image3.jpg" class="d-block w-100" alt="Item 3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="../Website/Images/background_Image.jpg" class="d-block w-100" alt="Item 4">
+                        </div>
+                        <div class="col-4">
+                            <img src="../Website/Images/background_image2.jpg" class="d-block w-100" alt="Item 5">
+                        </div>
+                        <div class="col-4">
+                            <img src="../Website/Images/background_image3.jpg" class="d-block w-100" alt="Item 6">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more slides as needed -->
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#multiItemCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#multiItemCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+
+
+
+    <!-- Seven Section -->
+
+    <div class="container seven_section">
+        <div class="align_center">
+            <div class="card-img">
+                <div class="iconfont-wr apper">
+                    <span class="mbr-iconfont mobi-mbri-quote-right mobi-mbri">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32"
+                            height="32" style="color: #20a997;">
+                            <path
+                                d="M15.9 20.4l7.1-5.9V3H13v10h3.6l-4 4 3.3 3.4zM15 11V5h6v8.5l-4.9 4.1-.7-.6 3.6-3.6V11h-4zM.6 17L4 20.4l7.1-5.9V3H1v10h3.6l-4 4zM3 11V5h6v8.5l-4.9 4.1-.7-.6L7 13.4V11H3z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <p class="mbr-fonts-style mbr-black rewiew mbr-pb-5 mbr-pt-2 display-5 seven_section_para_one">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ut similique, <br> enim dignissimos
+                delectus
+                provident placeat reprehenderit tempore. <br> Lorem ipsum dolor sit amet consectetur.
+            </p><br>
+            <p class="mbr-fonts-style author mbr-pb-2 display-7 seven_section_para_two">Kate White
+            </p><br>
+            <p class="mbr-fonts-style profession mbr-semibold display-4 seven_section_para_three">IT DEVELOPMENT
+            </p>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- Eight Section -->
+
+
+    <div class="container">
+        <div class="eight_section_main_div">
+            <div class="col-sm-6 col-md-6 col-lg-6 eight_section_image_div">
+                <img src="../Website/Images/eight_section_image.jpeg" alt="" width="100%" height="50%">
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 eight_section_content_div">
+                <h4 class="eight_section_first_heading">We create a workspace</h4><br>
+
+                <p class="eight_section_headings"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" width="16" height="16" style="color: #20a997;">
+                        <path
+                            d="M19 3V2h-2v1H7V2H5v1H0v19h24V3h-5zm3 17H2V5h3v1h2V5h10v1h2V5h3v15zM5 12h2v2H5v-2zm4 0h2v2H9v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM5 8h2v2H5V8zm4 0h2v2H9V8zm4 0h2v2h-2V8zm4 0h2v2h-2V8zM5 16h2v2H5v-2zm4 0h2v2H9v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z">
+                        </path>
+                    </svg>&nbsp;&nbsp;March 13, 2025 - March 27, 2025</p><br>
+                <p class="eight_section_headings"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" width="16" height="16" style="color: #20a997;">
+                        <path
+                            d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zM11 4h2v9H7v-2h4V4z">
+                        </path>
+                    </svg>&nbsp;&nbsp;18:00 pm - 21:00 pm</p><br>
+                <p class="eight_section_headings"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" width="16" height="16" style="color: #20a997;">
+                        <path
+                            d="M12 1.8L.4 10.2l1.2 1.6L4 10.1V22h16V10.1l2.4 1.8 1.2-1.6L12 1.8zM13 20h-2v-5h2v5zm5 0h-3v-7H9v7H6V8.6l6-4.4 6 4.4V20z">
+                        </path>
+                    </svg>&nbsp;&nbsp;Mobirise Studio</p><br>
+                <p class="eight_section_headings"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" width="16" height="16" style="color: #20a997;">
+                        <path
+                            d="M12 0C7 0 3 4 3 9c0 7.4 8.1 14.3 8.4 14.5l.6.5.6-.5c.3-.2 8.4-7.1 8.4-14.5 0-5-4-9-9-9zm0 21.5C10.2 19.9 5 14.3 5 9c0-3.9 3.1-7 7-7s7 3.1 7 7c0 5.3-5.2 10.9-7 12.5zM12 5C9.8 5 8 6.8 8 9s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z">
+                        </path>
+                    </svg>&nbsp;&nbsp;350 5th Ave, New York, NY 10118</p><br>
+                <h6 class="eight_section_headings">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum,
+                    corrupti?</h6><br>
+                <button class="" style="width: 150px;
+                    height: 52px;">Read More &nbsp;
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="11"
+                        height="11">
+                        <path d="M4.6 22.6L15.2 12 4.6 1.4 6 0l12 12L6 24z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- Nine Section -->
+
+    <div class="container">
+        <div class="nine_section_para_one">
+            <p>COWORKING</p>
+        </div>
+        <div class="nine_section_para_two">
+            <p>Follow us</p>
+        </div>
+    </div>
+    <div class="container nine_div_imges">
+        <div class="">
+
+            <img src="../Website/Images/sixth_section_img_two.jpg" alt="" width="320px" height="300px">
+
+            <img src="../Website/Images/sixth_section_img_one.jpg" alt="" width="320px" height="300px">
+
+            <img src="../Website/Images/section_forth_image.jpeg" alt="" width="320px" height="300px">
+
+            <img src="../Website/Images/section_fifth_one.jpg" alt="" width="320px" height="300px">
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- Tenth Section -->
+
+    <div class="container-fluid">
+        <div class="row tenth_main_div">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="tenth_first_div">
+                    <h3 class="tenth_section_h3">Coworking Space</h3>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Perferendissunt eos <br>autem
+                        necessitatibus dolore quos quas <br> dolorem harum? <br> Dicta, inventore.</p><br>
+                    <span><svg width="40" height="40" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" style="background-color: #a1ce55; padding: 10px; border-radius: 50%;">
+                            <path
+                                d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
+                            </path>
+                        </svg></span>&nbsp;
+                    <span><svg width="40" height="40" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" style="background-color: #20a997; padding: 10px; border-radius: 50%;">
+                            <path
+                                d="M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm138 0q0 164-115 279t-279 115-279-115-115-279 115-279 279-115 279 115 115 279zm108-410q0 38-27 65t-65 27-65-27-27-65 27-65 65-27 65 27 27 65zm-502-220q-7 0-76.5-.5t-105.5 0-96.5 3-103 10-71.5 18.5q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103-3 96.5 0 105.5.5 76.5-.5 76.5 0 105.5 3 96.5 10 103 18.5 71.5q20 50 58 88t88 58q29 11 71.5 18.5t103 10 96.5 3 105.5 0 76.5-.5 76.5.5 105.5 0 96.5-3 103-10 71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103 3-96.5 0-105.5-.5-76.5.5-76.5 0-105.5-3-96.5-10-103-18.5-71.5q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10-96.5-3-105.5 0-76.5.5zm768 630q0 229-5 317-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124t-124-322q-5-88-5-317t5-317q10-208 124-322t322-124q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317z">
+                            </path>
+                        </svg></span>&nbsp;
+                    <span><svg width="40" height="40" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" style="background-color:#a1ce55; padding: 10px; border-radius: 50%;">
+                            <path
+                                d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z">
+                            </path>
+                        </svg></span><br><br>
+                    <input type="text" placeholder="Subscribe"><br><br>
+                    <p>&#169;&nbsp;Copyright 2025 - All Rights Reserved</p>
+                </div>
+            </div><br>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="tenth_second_div">
+                    <h4>About</h4><br>
+                    <p>Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Odit, ab error. Blanditiis ut <br>
+                        totam
+                        commodi esse ipsa cum tenetur <br> dignissimos asperiores perferendis quo? <br> Dolorum tempore
+                        impedit
+                        fugiat ipsam <br>similique vel recusandae amet animi totam, <br> ipsa delectus enim? Molestiae,
+                        voluptas
+                        totam.</p><br><br>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30"
+                            height="30">
+                            <path
+                                d="M12 0C7 0 3 4 3 9c0 7.4 8.1 14.3 8.4 14.5l.6.5.6-.5c.3-.2 8.4-7.1 8.4-14.5 0-5-4-9-9-9zm0 21.5C10.2 19.9 5 14.3 5 9c0-3.9 3.1-7 7-7s7 3.1 7 7c0 5.3-5.2 10.9-7 12.5zM12 5C9.8 5 8 6.8 8 9s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z">
+                            </path>
+                        </svg>&nbsp;350 5th Ave, New York, NY 10118</p>
+                </div>
+            </div><br>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="tenth_third_div">
+                    <h4>Quick Links</h4><br>
+                    <a href="#">- Order</a><br><br>
+                    <a href="#">- Support</a><br><br>
+                    <a href="#">- Forums</a><br><br>
+                    <a href="#">- Privacy & Policy</a><br><br>
+                    <a href="#">- Terms</a><br><br>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            width="16" height="16">
+                            <path
+                                d="M18.9 24l-.7-.4C14.4 21.5 11 19.1 7.9 16 4.9 13 2.4 9.6.4 5.8L0 5.1 5.1 0l6.2 6.2-2 2.9 5.5 5.5 2.9-2 6.2 6.2-5 5.2zm-9.6-9.3c2.8 2.7 5.8 5 9.2 6.9l2.7-2.7-3.6-3.6-2.9 2-7.9-7.9 2-2.9-3.7-3.7-2.6 2.7c1.9 3.4 4.1 6.4 6.8 9.2z">
+                            </path>
+                        </svg>&nbsp;+88 123 456 78 90</a><br>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            width="16" height="16">
+                            <path d="M0 4v16h24V4H0zm19.8 2L12 10.7 4.2 6h15.6zM2 18V7l10 6 10-6v11H2z"></path>
+                        </svg>&nbsp;&nbsp;mobirise@company.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
